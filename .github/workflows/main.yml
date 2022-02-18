@@ -1,10 +1,13 @@
-name: How to use a Windows Runner on GitHub Actions
+name: Run PowerShell Scripts 
 on: push
+
 jobs:
   build:
+
     runs-on: ubuntu-latest
     steps:
       - name: Check out repo        
         uses: actions/checkout@v2
       - run: |
           ./first_script.ps1
+        shell: pwsh  
